@@ -1,7 +1,5 @@
 open Types
 
-(* Provided functions - DO NOT MODIFY *)
-
 (* Adds mapping [x:v] to environment [env] *)
 let extend env x v = (x, ref v) :: env
 
