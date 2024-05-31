@@ -20,7 +20,6 @@ let rec update env x v =
   | [] -> raise (DeclareError ("Unbound variable " ^ x))
   | (var, value) :: t -> if x = var then value := v else update t x v
 
-(* Part 1: Evaluating expressions *)
 
 (* Evaluates MicroCaml expression [e] in environment [env],
    returning an expression, or throwing an exception on error *)
@@ -108,7 +107,7 @@ let rec eval_expr env e = match e with
 
   
 
-(* Part 2: Evaluating mutop directive *)
+(* Evaluating mutop directive *)
 
 (* Evaluates MicroCaml mutop directive [m] in environment [env],
    returning a possibly updated environment paired with
